@@ -2,6 +2,29 @@ export const PAGES_MENU = [
   {
     path: 'pages',
     children: [
+       {
+        path: 'alarm',  // path for our page
+        data: { // custom menu declaration
+          menu: {
+            title: 'Alarm Page', // menu title
+            icon: 'ion-android-home', // menu icon
+           // pathMatch: 'prefix', // use it if item children not displayed in menu
+            selected: false,
+            expanded: false,
+            order: 1
+          }
+        },
+         children: [
+          {
+            path: 'alarmlist',
+            data: {
+              menu: {
+                title: 'Alarm List',
+              }
+            }
+          }
+        ]
+      },
       {
         path: 'dashboard',
         data: {
@@ -10,7 +33,7 @@ export const PAGES_MENU = [
             icon: 'ion-android-home',
             selected: false,
             expanded: false,
-            order: 0
+            order: 10
           }
         }
       },
